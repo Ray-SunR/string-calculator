@@ -1,0 +1,19 @@
+r a a
+r b b
+m d 10000 a
+m c 10000 b
+e a
+s a d c
+e b
+e c
+r c c
+m b 10000 c
+e d
+s d a b
+ld
+wd
+e a
+e b
+e c
+e d
+q

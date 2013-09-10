@@ -1,0 +1,50 @@
+f a
+s b a a
+la
+wa
+lb
+wb
+ea
+eb
+
+n a abc
+t b a 
+wa
+la
+lb
+wb
+
+ea
+eb
+
+n a abc
+m b 1 a
+lb
+wb
+la
+wa
+p c a 1
+lc
+wc
+
+ea
+eb
+ec
+
+n a 12345
+t b a abc
+lb
+wb
+ea
+eb
+
+n a 123abc
+la
+wa
+ea
+
+n a 123abc
+la
+wa
+ea
+q

@@ -1,0 +1,49 @@
+r a abcde
+la
+wa
+
+r b abc
+lb
+wb
+
+s c a b
+lc
+wc
+
+e a
+m a 2 b
+la
+wa
+
+e a
+p a b 2
+la
+wa
+
+e a
+n a cde
+la
+wa
+
+lc
+wc
+e c
+
+t c a fg
+lc
+wc
+
+f d
+ld
+wd
+
+e a
+s a d b
+la
+wa
+ea
+
+e b
+e c
+e d
+q

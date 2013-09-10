@@ -1,0 +1,47 @@
+n a a
+m b 10000 a
+eb
+ea
+la
+lb
+
+fa
+fb
+s c a b
+lc
+wc
+ea
+eb
+ec
+
+n a abc
+fb
+s c a b
+lc
+wc
+ea
+eb
+ec
+
+fa
+fb
+t c a b
+lc
+wc
+ea
+eb
+ec
+
+fa
+m b 0 a
+lb
+wb
+ea
+eb
+
+n a a
+m b 0 a
+lb
+wb
+ea
+eb
