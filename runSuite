@@ -1,0 +1,57 @@
+#!/bin/bash
+
+if [ $# -lt 2 ] ; then #Check there is enough command line parameters.
+	echo "Not enough parameters! (Needs two parameters!)" 1>&2
+	exit 1
+fi
+
+if [ ! -e $1 ] ; then
+	echo "$1 does not exist!" 1>&2
+	exit 1
+fi
+
+if [ ! -e $2 ] ; then
+	echo "$2 does not exist!" 1>&2
+	exit 1
+fi
+
+while read i
+do #Check whether there is missing file
+	if [ ! -r $i.in ] ; then
+		echo "$i.in file is unreadable!" 1>&2
+		exit 1
+	fi
+	if [ ! -r $i.out ] ; then
+		echo "$i.out file is unreadable!" 1>&2
+		exit 1
+	fi
+	if [ ! -e $i.out ] ; then
+		echo "$i.out file does not exist!" 1>&2
+		exit 1
+	fi
+	if [ ! -e $i.in ] ; then
+		echo "$i.in file does not exist!" 1>&2
+		exit 1
+	fi
+done < "$1"
+
+while read i
+do
+	tempfoo=`basename $i`
+	TMPFILE=`mktemp /tmp/${tempfoo}.XXXXXX` || exit 1
+	./$2 < $i.in > $TMPFILE
+	diff $TMPFILE $i.out > /tmp/diff
+	status=$?
+	if [ $status == 1 ] ; then
+   	echo "
+Test failed: "File $i ""
+	echo "Input:"
+	cat $i.in
+	echo "Expected:"
+	cat $i.out
+	echo "Actual:"
+	cat $TMPFILE
+	fi
+	rm $TMPFILE
+	rm /tmp/diff
+done < "$1"
