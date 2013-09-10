@@ -103,7 +103,7 @@ std::istream& operator>> (std::istream& in, iString& s)
 
 std::ostream& operator<< (std::ostream& out, const iString& s)
 {
-    for (int i = 0; i < s.length; i++)
+    for (int i = 0; i < (int)s.length; i++)
         out << *(s.chars + i);
     return out;
 }
