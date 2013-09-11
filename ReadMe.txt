@@ -26,6 +26,7 @@ Instruction
  You are provided with four spaces where you can store those strings. The position is denoted by using 'a' 'b' 'c' 'd'
 
  
+
  Commands are given in a regex style, e.g. saba, p a 3, f a, etc
  Copy Constructor needs to work before operator* and operator+ can be tested
  Delete (command e) iStrings before allocating new ones - otherwise memory leak
@@ -45,6 +46,11 @@ Instruction
  e source // delete source/call destructor - cleans up memory
  l source // print length of iString
  */
+
+ Test Cases are provided in the 'Test' folder where you can test the program by using the following commands:
+	./runsuite /Test/suite2.txt scalculator
+
+	Note: For the use of ./runsuite, take a look at my repository: Ray-SunR/Runsuite which facilitates auto-testing.
 
 Examples:
 
