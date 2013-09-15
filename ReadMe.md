@@ -49,11 +49,11 @@ An executable called "scalculator" will be produced
  8. f destination // default constructor - create empty iString (basically, empty string)    
  9. e source // delete source/call destructor - cleans up memory    
  10. l source // print length of iString       
-
+    
  Test Cases are provided in the 'Test' folder where you can test the program by using the following commands:      
 	./runsuite /Test/suite2.txt scalculator      
 
-	Note: For the use of ./runsuite, take a look at my repository: Ray-SunR/Runsuite which facilitates auto-testing.    
+	**Note: For the use of ./runsuite, take a look at my repository: Ray-SunR/Runsuite which facilitates auto-testing.**   
 
 #Examples:    
 
